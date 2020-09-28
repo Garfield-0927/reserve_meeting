@@ -1,0 +1,13 @@
+.search {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: #0094aa;
+}
+.navi {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 15rpx;
+  color: #666;
+}
