@@ -2,5 +2,7 @@
   "navigationBarTitleText": "首页",
   "usingComponents": {
     "searchbar":"../../components/searchbar/searchbar"
-  }
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
 }

@@ -33,7 +33,28 @@ App({
       }
     })
   },
+  wxRequest(method, url, data, callback, errFun) {
+    wx.request({
+      url: this.globalData.baseUrl+url,
+      method: method,
+      data: data,
+      header: {
+        'content-type': method == 'GET' ? 'application/json' : 'application/x-www-form-urlencoded',
+        'Accept': 'application/json'
+      },
+      dataType: 'json',
+      success: function (res) {
+        callback(res);
+      },
+      fail: function (err) {
+        errFun(err);
+      }
+    })
+  },
+
+  
   globalData: {
-    userInfo: null
+    baseUrl: 'http://120.79.175.19:8081/',
+    openid: 0
   }
 })

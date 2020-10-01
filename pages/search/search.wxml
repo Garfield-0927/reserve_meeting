@@ -1,0 +1,13 @@
+<view class="search">
+  <input type="text" class="navi" placeholder="搜索" placeholder-style="text-align:center"
+         focus="{{true}}"
+         bindconfirm="searchHandler"></input>
+</view>
+
+<view wx:if="{{list.length!=0}}" class="content_wrapper" wx:for="{{list}}" wx:key="id">
+  <navigator>
+    <view class="meeting_name">名称:{{item.name}}</view>
+    <view class="meeting_info">内容:{{item.simpleInfo}}</view>
+  </navigator>
+</view>
+

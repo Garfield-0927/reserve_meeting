@@ -18,6 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    searchinputHandler(e){
+      console.log(e);
+    }
+  },
+  
 
-  }
 })
