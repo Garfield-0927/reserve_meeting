@@ -1,2 +1,10 @@
-<!--pages/userinfo/userinfo.wxml-->
-<text>pages/userinfo/userinfo.wxml</text>
+<block wx:if="{{!userinfo}}">
+    <view class="userinfoContainer">
+        <image class="usericon" src="" mode="widthFix" > </image>
+        <view class="username"></view>
+    </view>
+</block>
+
+<block wx:else>
+    <button class="login" plain open-type="getUserInfo" bindgetuserinfo="getInfoHandler">登录</button>
+</block>
