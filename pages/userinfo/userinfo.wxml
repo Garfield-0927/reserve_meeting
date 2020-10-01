@@ -1,10 +1,12 @@
-<block wx:if="{{!userinfo}}">
-    <view class="userinfoContainer">
-        <image class="usericon" src="" mode="widthFix" > </image>
-        <view class="username"></view>
+<view class="userinfoContainer">
+    <view wx:if="{{userinfo}}" class="userinfoContainer">
+        <image class="userIcon" src="{{userinfo.avatarUrl}}" mode="widthFix"></image>
+        <view class="userName">{{userinfo.nickName}}</view>
     </view>
-</block>
-
-<block wx:else>
-    <button class="login" plain open-type="getUserInfo" bindgetuserinfo="getInfoHandler">登录</button>
-</block>
+    <view wx:else>
+        <button class="login" plain open-type="getUserInfo" bindgetuserinfo="getInfoHandler">
+            登录
+        </button>
+    </view>
+    
+</view>

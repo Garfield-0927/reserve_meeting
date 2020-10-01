@@ -15,6 +15,12 @@ Page({
 
   },
 
+  onShow: function(){
+    const userinfo = wx.getStorageSync("userinfo");
+    this.setData({userinfo})
+  },
+
+
   getInfoHandler(){
     wx.navigateTo({
       url: '/pages/login/login',
