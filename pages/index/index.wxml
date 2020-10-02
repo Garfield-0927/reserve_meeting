@@ -2,7 +2,7 @@
   <searchbar></searchbar>
 </view>
 <view class="content_wrapper" wx:for="{{list}}" wx:key="id">
-  <navigator>
+  <navigator url='pages/meetingInfo/meetingInfo'>
     <view class="meeting_name">名称:{{item.name}}</view>
     <view class="meeting_info">内容:{{item.simpleInfo}}</view>
   </navigator>

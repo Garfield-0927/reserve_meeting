@@ -5,16 +5,26 @@
 }
 .userinfoContainer .userinfoContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .userinfoContainer .userinfoContainer .userIcon {
   flex: 1;
   border-radius: 50%;
   width: 150rpx;
-  justify-content: center;
-  align-items: center;
 }
 .userinfoContainer .userinfoContainer .userName {
+  font-size: large;
+  padding-left: 50rpx;
   flex: 2;
-  justify-content: center;
-  align-items: center;
+}
+.userfunctionWrapper {
+  margin-top: 50rpx;
+}
+.userfunctionWrapper .checkReserved {
+  width: 70%;
+}
+.userfunctionWrapper .editInfo {
+  margin-top: 50rpx;
+  width: 70%;
 }
