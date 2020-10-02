@@ -1,2 +1,3 @@
-<!--pages/meetingInfo/meetingInfo.wxml-->
-<text>pages/meetingInfo/meetingInfo.wxml</text>
+<view class="meeting_detail_wrapper">
+    <view class="name" wx:for="{{detail}}" wx:for-index='key'>{{key}}:{{item}}</view>
+</view>

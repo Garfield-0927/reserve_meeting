@@ -6,6 +6,18 @@ Page({
   },
 
 
+  // ToInfo(e){
+  //   console.log(e);
+  //   wx.navigateTo({
+  //     url: '../meetingInfo/meetingInfo',
+  //     success: (res)=>{
+  //       console.log(res);
+  //     },
+  //     fail: (err)=>{
+  //       console.log(err);
+  //     },
+  //   });
+  // },
 
 
   onPullDownRefresh(){
