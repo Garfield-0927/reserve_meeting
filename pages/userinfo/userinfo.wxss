@@ -18,6 +18,12 @@
   padding-left: 50rpx;
   flex: 2;
 }
+.userinfoContainer button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90rpx;
+}
 .userfunctionWrapper {
   margin-top: 50rpx;
 }
