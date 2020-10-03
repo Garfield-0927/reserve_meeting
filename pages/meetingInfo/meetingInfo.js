@@ -9,6 +9,17 @@ Page({
     detail:{}
   },
 
+
+  regist:function(){
+    wx.navigateTo({
+      url: "/pages/regist/regist",
+      success: (res)=>{
+        console.log(res);
+      },
+
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

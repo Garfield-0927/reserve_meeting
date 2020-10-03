@@ -1,0 +1,24 @@
+.info_wrapper {
+  margin-left: 10rpx;
+}
+.info_wrapper .name {
+  margin-bottom: 50rpx;
+}
+.info_wrapper .name input {
+  width: 50%;
+  height: 50rpx;
+  border: 1rpx solid #000;
+  border-radius: 5rpx;
+}
+.info_wrapper .mail {
+  margin-bottom: 50rpx;
+}
+.info_wrapper .mail input {
+  width: 50%;
+  height: 50rpx;
+  border: 1rpx solid #000;
+  border-radius: 5rpx;
+}
+.submit {
+  margin-top: 50rpx;
+}

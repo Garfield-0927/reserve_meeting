@@ -4,7 +4,10 @@
     "pages/search/search",
     "pages/userinfo/userinfo",
     "pages/meetingInfo/meetingInfo",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/regist/regist",
+    "pages/registInfo/registInfo",
+    "pages/personalInfo/personalInfo"
   ],
   "window":{
     "backgroundTextStyle":"light",

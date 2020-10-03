@@ -13,7 +13,7 @@
 
 <view class="userfunctionWrapper">
 
-    <view><button class="checkReserved" type="primary">查看已预定的会议</button></view>
+    <view><button class="checkReserved" type="primary" bindtap="getRegisted">查看已预定的会议</button></view>
     <view><button class="editInfo" type="primary">编辑个人信息</button> </view>
 
 </view>

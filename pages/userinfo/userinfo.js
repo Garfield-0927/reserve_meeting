@@ -25,6 +25,12 @@ Page({
     wx.navigateTo({
       url: '/pages/login/login',
     });
+  },
+
+  getRegisted(){
+    wx.navigateTo({
+      url: '/pages/registInfo/registInfo',
+    });
   }
 
   

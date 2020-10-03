@@ -1,0 +1,18 @@
+<view class="info_wrapper">
+    <view class="name">
+        <view>姓名：(必填)</view>
+        <input type="text" placeholder="姓名" bindblur="getName"></input>
+    </view>
+    <view class="mail">
+        <view>邮箱：（必填）</view>
+        <input type="text" placeholder="邮箱" bindblur="getMail"></input>
+    </view>
+    <view class="gender">
+        性别：
+        <radio-group bindchange="getGender">
+            <radio name="sex" value="0">男</radio>
+            <radio name="sex" value="1">女</radio>
+        </radio-group>
+    </view>
+</view>
+<button class="submit" type="primary" bindtap="submit">提交信息</button>

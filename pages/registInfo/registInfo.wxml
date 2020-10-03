@@ -1,0 +1,4 @@
+<view wx:if="{{meeting!=null}}" class="meetingInfo_wrapper">
+    <view class="title">已预约成功的会议</view>
+    <navigator class="meetingName" wx:for="{{meeting}}" wx:key="{{item.id}}" url="/pages/meetingInfo/meetingInfo?id={{item.id}}">{{index+1}}: {{item.name}}</navigator>
+</view>

@@ -1,0 +1,12 @@
+.meetingInfo_wrapper .title {
+  font-size: 50rpx;
+  font-weight: bolder;
+  text-align: center;
+}
+.meetingInfo_wrapper .meetingName {
+  border-bottom: 1rpx solid #000;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  font-weight: bold;
+}

@@ -74,8 +74,15 @@
           "scene": null
         },
         {
-          "name": "pages/meetingInfo/meetingInfo",
-          "pathName": "pages/meetingInfo/meetingInfo",
+          "name": "pages/registInfo/registInfo",
+          "pathName": "pages/registInfo/registInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/regist/regist",
+          "pathName": "pages/regist/regist",
+          "query": "",
           "scene": null
         }
       ]
