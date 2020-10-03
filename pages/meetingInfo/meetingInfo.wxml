@@ -1,3 +1,26 @@
-<view class="meeting_detail_wrapper">
-    <view class="name" wx:for="{{detail}}" wx:for-index='key'>{{key}}:{{item}}</view>
+<view class="content">
+			<text>
+  报名截止日期：{{detail.registerDeadline}}
+  </text>
+			<text>
+  会议开始时间：{{detail.startDateTime}}
+  </text>
+			<text>
+  会议结束时间：{{detail.endDateTime}}
+  </text>
+			<text>
+  人数上限：{{detail.maxParticipator}}
+  </text>
+			<text>
+  会议地点：{{detail.location}}
+  </text>
+			<text>
+  主办方：{{detail.sponsor}}
+  </text>
+</view>
+
+<view class="button_wrapper">
+    <button class="register" type="primary" bindtap="regist">我要报名</button>
+
+    <button class="cancel" type="warn">取消报名</button>
 </view>

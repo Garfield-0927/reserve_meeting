@@ -57,12 +57,6 @@
     "gamePlugin": {
       "list": []
     },
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
@@ -76,6 +70,12 @@
           "id": -1,
           "name": "pages/userinfo/userinfo",
           "pathName": "pages/userinfo/userinfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/meetingInfo/meetingInfo",
+          "pathName": "pages/meetingInfo/meetingInfo",
           "scene": null
         }
       ]
