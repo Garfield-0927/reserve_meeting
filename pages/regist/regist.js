@@ -1,10 +1,13 @@
-// pages/regist/regist.js
+const app =  getApp();
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    confId:"",
     name:"",
     mail:"",
     gender:""
@@ -66,7 +69,45 @@ Page({
     }
     else
     {
-      // 发送post请求
+      let url = "miniapp/options/commitOptions";
+      let data2 = {
+        confId:this.data.confId,
+        weixinOpenId:"1",
+        options:[
+        {
+          name:"name",
+          value:this.data.name
+        },
+        {
+          name:"mail",
+          value:this.data.mail
+        }
+        ]
+      };
+
+      app.wxRequest('POST', url, data2, 
+      (res)=>{
+        wx.showToast({
+          title: 'success',
+          icon: 'none',
+          image: '',
+          duration: 1500,
+          mask: false,
+        });
+      },
+      (err)=>{
+        wx.showToast({
+          title: 'fail',
+          icon: 'none',
+          image: '',
+          duration: 1500,
+          mask: false,
+        });
+        console.log(err);
+      })
+      wx.navigateBack({
+        delta: 1
+      });
     }
   },
   
@@ -75,7 +116,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      id:options.id
+    })
   },
 
 

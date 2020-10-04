@@ -78,12 +78,6 @@
           "pathName": "pages/registInfo/registInfo",
           "query": "",
           "scene": null
-        },
-        {
-          "name": "pages/regist/regist",
-          "pathName": "pages/regist/regist",
-          "query": "",
-          "scene": null
         }
       ]
     }
