@@ -14,10 +14,6 @@ Page({
     let that = this;
     wx.navigateTo({
       url: "/pages/regist/regist?id="+that.data.id,
-      success: (res)=>{
-        console.log(res);
-      },
-
     });
   },
 

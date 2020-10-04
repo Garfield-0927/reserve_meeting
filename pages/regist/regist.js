@@ -7,36 +7,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    confId:"",
-    name:"",
-    mail:"",
-    gender:""
+    options:[],
+    info:[]
   },
 
-  getName(e){
-    this.setData({
-      name:e.detail.value
-    })
-  },
-
-  getMail(e){
-    this.setData({
-      mail:e.detail.value
-    })
-  },
-
-  getGender(e){
-    this.setData({
-      gender:e.detail.value
-    })
-  },
 
   submit(){
-    let data={
-      name:this.data.name,
-      mail:this.data.mail,
-      gender:this.data.gender
-    };
+    const that = this;
+    let info = new Array();
+    for(let i = 0; i<this.data.options.length; i++)
+    {
+      console.log(that.data.options[i].name + "hahaha");
+      console.log("hehehe"+document.getElementsByName(that.data.options[i].name));
+      info[i] = 
+      {
+        name:that.data.options[i].name,
+        value:document.getElementsByName(that.data.options[i].name)
+      }
+      
+    }
+    console.log(info);
     if(!data.name||!data.mail)
     {
       if(!data.name&&!data.name)
@@ -116,6 +106,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let url="miniapp/options/getOptions";
+    let data = {
+      id:options.id,
+      weixinOpenId:1
+    };
+
+    let that = this;
+    app.wxRequest('POST', url, data, 
+    (res)=>{
+      that.setData({
+        options:res.data.data.options
+      })
+    },
+    (err)=>{
+      console.log(err);
+    })
+
     this.setData({
       id:options.id
     })
