@@ -7,6 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    confId:0,
+    weixinOpenId:0,
     options: [],
     info: []
   },
@@ -32,8 +34,7 @@ Page({
   },
 
   submit() {
-    const that = this;
-    const info = this.data.info;
+    
     // if(!data.name||!data.mail)
     // {
     //   if(!data.name&&!data.name)
@@ -81,8 +82,16 @@ Page({
     //     }
     //     ]
     //   };
+
+    const that = this;
+    let data = {
+      confId:this.data.confId,
+      weixinOpenId:this.data.weixinOpenId,
+      options:this.data.info
+    }
+    
     let url = "miniapp/options/commitOptions";
-    app.wxRequest('POST', url, info,
+    app.wxRequest('POST', url, data,
       (res) => {
         wx.showToast({
           title: 'success',
@@ -91,6 +100,7 @@ Page({
           duration: 1500,
           mask: false,
         });
+        console.log(res);
       },
       (err) => {
         wx.showToast({
@@ -115,8 +125,12 @@ Page({
     let url = "miniapp/options/getOptions";
     let data = {
       id: options.id,
-      weixinOpenId: 1
+      weixinOpenId: "1"
     };
+    this.setData({
+      confId:options.id,
+      weixinOpenId: "1"
+    })
 
     let that = this;
     app.wxRequest('POST', url, data,

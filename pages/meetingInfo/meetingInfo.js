@@ -6,7 +6,8 @@ Page({
    */
   data: {
     id:0,
-    detail:{}
+    detail:{},
+    hasRegisted: false
   },
 
 
@@ -32,8 +33,10 @@ Page({
     let that = this;
     app.wxRequest('POST',url,data,
     (res)=>{
+      console.log(res);
       that.setData({
-        detail:res.data.data.conferenceInfo
+        detail:res.data.data.conferenceInfo,
+        hasRegisted:res.data.data.isRegistered
       });
     },
     (err)=>{
