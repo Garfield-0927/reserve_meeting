@@ -9,8 +9,7 @@ Page({
   data: {
     confId:0,
     weixinOpenId:0,
-    options: [],
-    info: []
+    options: []
   },
 
 
@@ -21,16 +20,16 @@ Page({
       name: name.target.dataset.string,
       value: name.detail.value
     };
-
-    for(let i=0; i<this.data.info.length; i++)
+    for(let i = 0; i < this.data.options.length; i++)
     {
-      if(this.data.info[i].name == info.name)
+      if(this.data.options[i].name == info.name)
       {
-        this.data.info[i].value = info.value;
+        this.data.options[i].value = info.value;
         return;
       }
     }
-    this.data.info.push(info);
+   
+    
   },
 
   submit() {
@@ -84,20 +83,22 @@ Page({
     //   };
 
     // const that = this;
-    // let info = {
-    //   confId:this.data.confId,
-    //   weixinOpenId:this.data.weixinOpenId,
-    //   options:this.data.info
-    // }
-    
-    // let url = "miniapp/options/commitOptions";
 
+    // let url = "miniapp/options/commitOptions";
+    const that = this;
+    let data = {
+      confId:that.data.confId,
+      weixinOpenId:that.data.weixinOpenId,
+      options:that.data.options
+    };
+    console.log(data);
+    
     wx.request({
       url: app.globalData.baseUrl+"miniapp/options/commitOptions",
       data: {
-        confId:this.data.confId,
-        weixinOpenId:this.data.weixinOpenId,
-        options:this.data.info
+        confId:that.data.confId,
+        weixinOpenId:that.data.weixinOpenId,
+        options:that.data.options
       },
       header: {'content-type':'application/json',
                 'Accepted':'application/json'},

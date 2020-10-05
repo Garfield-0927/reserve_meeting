@@ -33,7 +33,6 @@ Page({
     let that = this;
     app.wxRequest('POST',url,data,
     (res)=>{
-      console.log(res);
       that.setData({
         detail:res.data.data.conferenceInfo,
         hasRegisted:res.data.data.isRegistered
