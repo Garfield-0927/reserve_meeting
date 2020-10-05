@@ -1,7 +1,7 @@
 <view class="info_wrapper">
     <view class="info_detail" wx:for="{{options}}" wx:key="id">
         <view class="option_name">{{item.name}} {{item.necessary ? "(必填)":""}}</view>
-        <input type="text" placeholder="{{item.name}}" name="{{item.name}}"></input>
+        <input type="text" placeholder="{{item.name}}" name="{{item.name}}" bindblur="getInfo" data-string="{{item.name}}"></input>
     </view>
 </view>
 <button class="submit" type="primary" bindtap="submit">提交信息</button>
