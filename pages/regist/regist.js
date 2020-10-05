@@ -83,38 +83,55 @@ Page({
     //     ]
     //   };
 
-    const that = this;
-    let data = {
-      confId:this.data.confId,
-      weixinOpenId:this.data.weixinOpenId,
-      options:this.data.info
-    }
+    // const that = this;
+    // let info = {
+    //   confId:this.data.confId,
+    //   weixinOpenId:this.data.weixinOpenId,
+    //   options:this.data.info
+    // }
     
-    let url = "miniapp/options/commitOptions";
-    app.wxRequest('POST', url, data,
-      (res) => {
-        wx.showToast({
-          title: 'success',
-          icon: 'none',
-          image: '',
-          duration: 1500,
-          mask: false,
-        });
+    // let url = "miniapp/options/commitOptions";
+
+    wx.request({
+      url: app.globalData.baseUrl+"miniapp/options/commitOptions",
+      data: {
+        confId:this.data.confId,
+        weixinOpenId:this.data.weixinOpenId,
+        options:this.data.info
+      },
+      header: {'content-type':'application/json',
+                'Accepted':'application/json'},
+      method: 'POST',
+      dataType: 'json',
+      success: (res)=>{
         console.log(res);
       },
-      (err) => {
-        wx.showToast({
-          title: 'fail',
-          icon: 'none',
-          image: '',
-          duration: 1500,
-          mask: false,
-        });
-        console.log(err);
-      })
-    wx.navigateBack({
-      delta: 1
-    });
+    })
+
+  //   app.wxRequest('POST', url, data,
+  //     (res) => {
+  //       wx.showToast({
+  //         title: 'success',
+  //         icon: 'none',
+  //         image: '',
+  //         duration: 1500,
+  //         mask: false,
+  //       });
+  //       console.log(res);
+  //     },
+  //     (err) => {
+  //       wx.showToast({
+  //         title: 'fail',
+  //         icon: 'none',
+  //         image: '',
+  //         duration: 1500,
+  //         mask: false,
+  //       });
+  //       console.log(err);
+  //     })
+  //   wx.navigateBack({
+  //     delta: 1
+  //   });
   },
 
 
