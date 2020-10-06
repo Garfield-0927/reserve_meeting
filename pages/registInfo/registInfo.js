@@ -25,8 +25,6 @@ Page({
       that.setData({
         meeting: res.data.data.list
       })
-
-      console.log(that.data);
       },
     (err)=>{
       console.log(err);

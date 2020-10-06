@@ -21,5 +21,5 @@
 
 <view class="button_wrapper">
     <button class="register" wx:if="{{!hasRegisted}}"  type="primary" bindtap="regist">我要报名</button>
-    <button class="cancel" wx:else type="warn">取消报名</button>
+    <button class="cancel" wx:else type="warn" bindtap="cancelMeeting">取消报名</button>
 </view>

@@ -7,7 +7,8 @@ Page({
   data: {
     id:0,
     detail:{},
-    hasRegisted: false
+    hasRegisted: false,
+    weixinOpenId:"hello"
   },
 
 
@@ -16,6 +17,24 @@ Page({
     wx.navigateTo({
       url: "/pages/regist/regist?id="+that.data.id,
     });
+  },
+
+  cancelMeeting(){
+    let data = {
+      weixinOpenId:this.data.weixinOpenId,
+      confId:this.data.id
+    };
+
+    let url = "miniapp/mine/cancelReserve";
+
+    app.wxRequest('POST', url, data, 
+    (res)=>{
+      console.log(res);
+    },
+    (err)=>{
+      console.log(err);
+    })
+
   },
 
   /**
