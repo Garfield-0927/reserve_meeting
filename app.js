@@ -54,7 +54,7 @@ App({
 
   
   globalData: {
-    baseUrl: 'http://120.79.175.19:8081/',
+    baseUrl: 'http://localhost:8081/',
     openid: 0
   }
 })
